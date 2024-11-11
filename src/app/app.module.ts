@@ -11,7 +11,18 @@ import { NotfindComponent } from './notfind/notfind.component';
 import { ContactComponent } from './public/contact/contact.component';
 import { PricingComponent } from './public/pricing/pricing.component';
 import { ShoppingComponent } from './public/shopping/shopping.component';
+import { ServicesComponent } from './public/services/services.component';
+import { RouterModule, Routes } from '@angular/router';
+import { LayoutComponent } from './component/layout/layout.component';
 
+
+const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'shopping', component: ShoppingComponent },
+  { path: 'services', component: ServicesComponent },
+  { path: 'pricing', component: PricingComponent },
+  { path: 'contact', component: ContactComponent },
+];
 
 @NgModule({
   declarations: [
@@ -23,17 +34,19 @@ import { ShoppingComponent } from './public/shopping/shopping.component';
     NotfindComponent,
     ContactComponent,
     PricingComponent,
-    ShoppingComponent
+    ShoppingComponent,
+    ServicesComponent,
+    LayoutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbPaginationModule, NgbAlertModule
+    NgbPaginationModule, NgbAlertModule,
+    RouterModule.forRoot(routes)
+
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {
-
-
 }
