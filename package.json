@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "postbuild": "mkdir -p dist/fish-shop/browser && touch dist/fish-shop/browser/.nojekyll",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -32,6 +33,7 @@
     "@angular/cli": "~14.2.13",
     "@angular/compiler-cli": "^14.2.0",
     "@types/jasmine": "~4.0.0",
+    "angular-cli-ghpages": "^2.0.3",
     "autoprefixer": "^10.4.20",
     "jasmine-core": "~4.3.0",
     "karma": "~6.4.0",
